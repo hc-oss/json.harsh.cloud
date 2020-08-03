@@ -1,0 +1,10 @@
+# JSON viewer
+
+https://json.foobars.in/
+
+Minimal JSON viewer and formatter built on top of [monaco](https://microsoft.github.io/monaco-editor/)
+
+### Features
+
+- Sort
+- Format
