@@ -1,8 +1,8 @@
 import "./styles.css";
 
-import { ControlledEditor } from "@monaco-editor/react";
+import Editor from "@monaco-editor/react";
 import jsonabc from "jsonabc";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function App() {
   const [value, setValue] = useState<any>();
@@ -14,6 +14,7 @@ function App() {
   const handleOnFormat = () => {
     setValue(JSON.stringify(JSON.parse(value), null, 2));
   };
+
 
   return (
     <>
@@ -36,12 +37,12 @@ function App() {
           </button>
         </div>
       </header>
-      <ControlledEditor
+      <Editor
         height="var(--editor-height)"
         value={value}
-        onChange={(_, v) => setValue(v)}
-        language="json"
-        theme="dark"
+        onChange={(v) => setValue(v)}
+        defaultLanguage="json"
+        theme="vs-dark"
       />
     </>
   );
