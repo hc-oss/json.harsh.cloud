@@ -1,6 +1,6 @@
 # JSON viewer
 
-https://json.foobars.in/
+https://json.harsh.cloud/
 
 Minimal JSON viewer and formatter built on top of [monaco](https://microsoft.github.io/monaco-editor/)
 
