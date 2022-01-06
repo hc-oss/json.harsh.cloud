@@ -1,20 +1,19 @@
-import "./styles.css";
-
 import Editor from "@monaco-editor/react";
-import jsonabc from "jsonabc";
-import React, { useEffect, useRef, useState } from "react";
+import jsonabc from "jsonabc/index";
+import React, { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState<any>();
+  const [value, setValue] = useState();
+
+  const JSONParse = (js) => new Function("return (" + js + ")")();
 
   const handleOnSort = () => {
-    setValue(JSON.stringify(jsonabc.sortObj(JSON.parse(value)), null, 2));
+    setValue(JSON.stringify(jsonabc.sortObj(JSONParse(value)), null, 2));
   };
 
   const handleOnFormat = () => {
-    setValue(JSON.stringify(JSON.parse(value), null, 2));
+    setValue(JSON.stringify(JSONParse(value), null, 2));
   };
-
 
   return (
     <>

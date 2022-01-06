@@ -1,36 +1,20 @@
 {
   "name": "json.harsh.cloud",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Minimal JSON Viewer",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
-  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@monaco-editor/react": "4.2.2",
-    "jsonabc": "2.3.1",
+    "@monaco-editor/react": "^4.3.1",
+    "jsonabc": "^2.3.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/jsonabc": "^2.3.1",
-    "@types/react": "17.0.26",
-    "@types/react-dom": "17.0.9",
-    "typescript": "4.4.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@vitejs/plugin-react": "^1.0.7",
+    "vite": "^2.7.2"
+  }
 }
